@@ -8,9 +8,9 @@ summary: |-
 upstream:
   url: https://www.opera.com/
   version:
-    type: command
-    run: |-
-      curl -sL https://deb.opera.com/opera-stable/dists/stable/non-free/binary-amd64/Packages | awk -F ': ' '/opera-stable/{ getline; print $2; exit}'
+    type: deb_packages
+    index_url: https://deb.opera.com/opera-stable/dists/stable/non-free/binary-amd64/Packages
+    package: opera-stable
 
 release:
   branch: master
